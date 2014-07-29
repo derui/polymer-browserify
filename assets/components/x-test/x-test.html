@@ -1,0 +1,14 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+
+<polymer-element name="x-test" attributes="name">
+  <template>
+
+    <div on-click="{{ onClick }}">{{name}}</div>
+    <ul>
+      <template repeat="{{s in items }}">
+        <li>{{s}}</li>
+      </template>
+    </ul>
+  </template>
+  <script src="x-test.js"></script>
+</polymer-element>
