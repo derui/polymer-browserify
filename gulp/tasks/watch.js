@@ -1,18 +1,9 @@
 var gutil = require('gulp-util');
 var gulp = require('gulp');
-var source = require('vinyl-source-stream');
-var browserify = require('browserify');
-var vulcanize = require('gulp-vulcanize');
+var util = require('../util');
 
 gulp.task('watch', function() {
-  gulp.watch('./src/**/*.js', function(e) {
-    var b = browserify(e.path);
+  gulp.watch('./src/**/*.js', ['browserify']);
 
-    b.bundle()
-      .on('error', function (e) {
-        gutil.log('Browserify Error', e);
-      })
-      .pipe(source(e.path))
-      .pipe(gulp.dest('./dest'));
-  });
+  gulp.watch('./assets/**/*.js', ['vulcanize']);
 });
