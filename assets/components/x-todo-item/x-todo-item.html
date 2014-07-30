@@ -1,0 +1,11 @@
+<link rel="import" href="/js/vendor/polymer/polymer.html">
+
+<polymer-element name="x-todo-item" attributes="title">
+  <template>
+    <div class="item">
+      <div class="item__body">{{title}}</div>
+      <div class="item__deleter" on-click="{{deleterClickAction}}">×</div>
+    </div>
+  </template>
+  <script src="x-todo-item.js"></script>
+</polymer-element>

@@ -15,5 +15,9 @@
   ],
   "dependencies": {
     "polymer": "Polymer/polymer#~0.3.4"
+  },
+  "devDependencies": {
+    "mocha": "~1.21.3",
+    "chai": "~1.9.1"
   }
 }

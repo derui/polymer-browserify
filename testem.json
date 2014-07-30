@@ -1,0 +1,11 @@
+{
+  "test_page": "test/runner.mustache",
+  "src_files": [
+    "./test/specs/**/specs.js"
+  ],
+  "routes" : {
+    "/components" : "dest/components",
+    "/js" : "."
+  },
+  "framework": "mocha"
+}

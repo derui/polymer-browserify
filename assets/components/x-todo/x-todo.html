@@ -1,0 +1,13 @@
+<link rel="import" href="../vendor/polymer/polymer.html">
+<link rel="import" href="../x-todo-list/x-todo-list.html">
+<link rel="import" href="../x-todo-item/x-todo-item.html">
+
+<polymer-element name="x-todo">
+  <template>
+    <x-todo-list class="todo-list">
+    </x-todo-list>
+    <input type="text" class="todo-title">
+    <button type="button" class="todo-appender" on-click="{{onClickAppender}}">追加</button>
+  </template>
+  <script src="x-todo.js"></script>
+</polymer-element>

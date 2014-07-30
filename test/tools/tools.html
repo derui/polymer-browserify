@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="../../vendor/mocha/mocha.css"></script>
+<script src="../../vendor/mocha/mocha.js"></script>
+<script src="../../vendor/chai/chai.js"></script>
+<script src="./htmltest.js"></script>
+<script>
+ window.expect = chai.expect;
+ mocha.setup({
+   ui : 'bdd',
+   slow: 1000,
+   timeout: 5000
+ });
+</script>
