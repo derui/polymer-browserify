@@ -1,7 +1,11 @@
-<link rel="import" href="../vendor/polymer/polymer.html">
+<link rel="import" href="/js/vendor/polymer/polymer.html">
+<link rel="import" href="../x-todo-item/x-todo-item.html">
 
 <polymer-element name="x-todo-list">
-  <template>
+  <template >
+    <template repeat="{{i in items}}">
+      <x-todo-item model="{{i}}" on-x-todo-item-delete="{{deleteAction}}"></x-todo-item>
+    </template>
   </template>
   <script src="x-todo-list.js"></script>
 </polymer-element>

@@ -2,7 +2,8 @@ var gulp = require('./gulp')([
   'browserify',
   'vulcanize',
   'watch',
-  'copy'
+  'copy',
+  'connect'
 ]);
 
 gulp.task('build', ['vulcanize', 'browserify', 'copy']);

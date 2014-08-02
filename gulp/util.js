@@ -5,6 +5,7 @@ var source = require('vinyl-source-stream');
 var glob = require('glob');
 var path = require('path');
 var fs = require('fs');
+var remapify = require('remapify');
 
 // fileに対してdestを対象にして出力する。
 module.exports = function(file, options) {
@@ -22,6 +23,14 @@ module.exports = function(file, options) {
   }
   fname += path.extname(file);
   dirname.push(fname);
+
+  b.plugin(remapify, [
+    {
+      src: './**/*.js',
+      expose: 'app/',
+      cwd : __dirname + '/../src'
+    }
+  ]);
 
   b.bundle()
     .on('error', function (e) {

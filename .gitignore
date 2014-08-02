@@ -4,4 +4,4 @@ node_modules
 dest
 src/components
 
-test/**/*_browserified.js
+test_browserified
